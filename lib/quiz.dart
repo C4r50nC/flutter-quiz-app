@@ -30,12 +30,18 @@ class _QuizState extends State<Quiz> {
     });
   }
 
+  void restartQuiz() {
+    setState(() {
+      activeScreen = QuestionsScreen(chooseAnswer);
+    });
+  }
+
   void chooseAnswer(String answer) {
     selectedAnswers.add(answer);
 
     if (selectedAnswers.length == questions.length) {
       setState(() {
-        activeScreen = ResultsScreen(selectedAnswers);
+        activeScreen = ResultsScreen(selectedAnswers, restartQuiz);
         selectedAnswers = [];
       });
     }
