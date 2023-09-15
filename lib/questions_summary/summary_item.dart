@@ -37,7 +37,7 @@ class SummaryItem extends StatelessWidget {
               Text(
                 itemData['user_answer'] as String,
                 style: const TextStyle(
-                  color: Colors.red,
+                  color: Colors.green,
                 ),
               ),
               Text(
