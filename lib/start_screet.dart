@@ -14,7 +14,7 @@ class StartScreen extends StatelessWidget {
             width: 300,
           ),
           const Padding(
-            padding: EdgeInsets.only(top: 40),
+            padding: EdgeInsets.only(top: 80),
           ),
           const Text(
             'Learn Flutter the fun way!',
@@ -24,15 +24,17 @@ class StartScreen extends StatelessWidget {
             ),
           ),
           const Padding(
-            padding: EdgeInsets.only(top: 40),
+            padding: EdgeInsets.only(top: 30),
           ),
-          ElevatedButton(
+          OutlinedButton(
             onPressed: () {},
-            style: ButtonStyle(
-              backgroundColor: MaterialStateProperty.all(Colors.deepPurple),
+            style: OutlinedButton.styleFrom(
+              foregroundColor: Colors.white,
             ),
-            child: const Text('Start Quiz!'),
-          )
+            child: const Text(
+              'Start Quiz',
+            ),
+          ),
         ],
       ),
     );
